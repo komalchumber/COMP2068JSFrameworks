@@ -1,5 +1,6 @@
 const prompt = require('prompt');
 
+//start the prompt
 prompt.start();
 
 const schema = {
@@ -12,9 +13,11 @@ const schema = {
   }
 };
 
+// initialize the user and computer score
 let userScore = 0;
 let computerScore = 0;
 
+// function to play rounds
 function Round(round) {
   console.log(`\nRound ${round + 1}`);
   prompt.get(schema, (err, result) => {
@@ -28,6 +31,7 @@ function Round(round) {
     console.log(`User selected: ${userSelection}`);
     console.log(`Computer selected: ${computerSelection}`);
 
+    // update scores and declare the results
     const roundResult = finalResult(userSelection, computerSelection);
     if (roundResult === 'User Wins') {
       userScore++;
@@ -35,10 +39,11 @@ function Round(round) {
       computerScore++;
     }
 
+    // play the 4 rounds, 0, 1, 2 and 3.
     if (round < 3) {
       Round(round + 1);
     } else {
-      console.log(`\nFinal Scores:`);
+      console.log(`\nFinal Scores:`); // print the final scores
       console.log(`User: ${userScore}`);
       console.log(`Computer: ${computerScore}`);
 
@@ -53,6 +58,7 @@ function Round(round) {
   });
 }
 
+// function to get any random computer selection
 function getComputerSelection() {
   const randomNum = Math.random();
   if (randomNum <= 0.34) {
@@ -64,6 +70,7 @@ function getComputerSelection() {
   }
 }
 
+//print the final result
 function finalResult(userSelection, computerSelection) {
   switch (true) {
     case userSelection === computerSelection:
