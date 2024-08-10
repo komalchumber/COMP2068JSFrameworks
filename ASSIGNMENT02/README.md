@@ -29,8 +29,3 @@ The University Project Management System is a web-based application designed to 
 - Node.js (v18.19.1 or later)
 - MongoDB (local or cloud instance)
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/your-username/university-project-management.git
-cd university-project-management
