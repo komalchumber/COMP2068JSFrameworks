@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/admin/students">Manage Students</a></li>
+                <li><a href="/admin/faculty">Manage Faculty</a></li>
+                <li><a href="/admin/courses">Manage Courses</a></li>
+                <li><a href="/admin/projects">Manage Projects</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome, {{user.name}}</h2>
+        <p>Use the navigation links to manage the university system.</p>
+    </main>
+</body>
+</html>

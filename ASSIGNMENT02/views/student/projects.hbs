@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="/stylesheets/student.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/student/dashboard">Dashboard</a></li>
+                <li><a href="/student/projects">Projects</a></li>
+                <li><a href="/student/profile">Profile</a></li>
+                <li><a href="/student/notifications">Notifications</a></li>
+                <li><a href="/student/settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>My Projects</h1>
+        <ul class="project-list">
+            {{#each projects}}
+            <li>
+                <h2>{{this.title}}</h2>
+                <p>{{this.description}}</p>
+                <a href="/student/projects/{{this.id}}" class="btn">View Details</a>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University Project Management System</p>
+    </footer>
+</body>
+</html>

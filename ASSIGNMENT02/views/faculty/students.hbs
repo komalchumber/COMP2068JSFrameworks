@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students - Faculty Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Students</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/faculty/dashboard">Dashboard</a>
+            <a href="/faculty/projects">Projects</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h2>All Students</h2>
+        <ul>
+            {{#each students}}
+            <li><a href="/faculty/students/{{_id}}">{{name}}</a></li>
+            {{/each}}
+        </ul>
+    </main>
+</body>
+</html>

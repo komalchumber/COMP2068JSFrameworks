@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{course.name}}</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>{{course.name}}</h1>
+        <nav>
+            <a href="/students/dashboard">Dashboard</a>
+            <a href="/students/profile">Profile</a>
+            <a href="/users/logout">Logout</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h2>Assignments</h2>
+        <ul>
+            {{#each course.assignments}}
+            <li>{{this.title}} - Due: {{this.dueDate}}</li>
+            {{/each}}
+        </ul>
+    </main>
+</body>
+</html>

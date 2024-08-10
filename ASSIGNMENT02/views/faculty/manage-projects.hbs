@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Projects</title>
+    <link rel="stylesheet" href="/stylesheets/faculty.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/faculty/dashboard">Dashboard</a></li>
+                <li><a href="/faculty/manage-projects">Manage Projects</a></li>
+                <li><a href="/faculty/profile">Profile</a></li>
+                <li><a href="/faculty/notifications">Notifications</a></li>
+                <li><a href="/faculty/settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Manage Projects</h1>
+        <ul class="project-list">
+            {{#each projects}}
+            <li>
+                <h2>{{this.title}}</h2>
+                <p>{{this.description}}</p>
+                <a href="/faculty/manage-projects/{{this.id}}" class="btn">View Project</a>
+                <a href="/faculty/manage-projects/{{this.id}}/edit" class="btn">Edit Project</a>
+                <a href="/faculty/manage-projects/{{this.id}}/delete" class="btn delete">Delete Project</a>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University Project Management System</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="/stylesheets/faculty.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/faculty/dashboard">Dashboard</a></li>
+                <li><a href="/faculty/manage-projects">Manage Projects</a></li>
+                <li><a href="/faculty/profile">Profile</a></li>
+                <li><a href="/faculty/notifications">Notifications</a></li>
+                <li><a href="/faculty/settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Notifications</h1>
+        <ul class="notifications-list">
+            {{#each notifications}}
+            <li>
+                <h2>{{this.title}}</h2>
+                <p>{{this.message}}</p>
+                <span>{{this.date}}</span>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University Project Management System</p>
+    </footer>
+</body>
+</html>

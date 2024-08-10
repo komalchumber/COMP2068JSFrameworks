@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Queue</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Queue</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/queue">Queue</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Manage Current Queue</h2>
+        {{#if flash.success}}
+            <div class="alert alert-success">{{flash.success}}</div>
+        {{/if}}
+        {{#if flash.error}}
+            <div class="alert alert-danger">{{flash.error}}</div>
+        {{/if}}
+        <ul>
+            {{#each queue}}
+            <li>
+                {{name}} - {{timestamp}}
+                <form action="/manage/delete" method="POST" style="display:inline;">
+                    <input type="hidden" name="id" value="{{_id}}">
+                    <button type="submit">Remove</button>
+                </form>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+</body>
+</html>

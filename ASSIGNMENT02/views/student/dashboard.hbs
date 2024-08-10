@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/student.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/student/dashboard">Dashboard</a></li>
+                <li><a href="/student/projects">Projects</a></li>
+                <li><a href="/student/profile">Profile</a></li>
+                <li><a href="/student/notifications">Notifications</a></li>
+                <li><a href="/student/settings">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Your Dashboard, {{user.name}}</h1>
+        <p>Here you can view your projects, manage your profile, and stay updated with notifications.</p>
+        
+        <section class="quick-actions">
+            <div>
+                <h2>My Projects</h2>
+                <a href="/student/projects" class="btn">View Projects</a>
+            </div>
+            <div>
+                <h2>Profile</h2>
+                <a href="/student/profile" class="btn">Manage Profile</a>
+            </div>
+            <div>
+                <h2>Notifications</h2>
+                <a href="/student/notifications" class="btn">View Notifications</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 University Project Management System</p>
+    </footer>
+</body>
+</html>

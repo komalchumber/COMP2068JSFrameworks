@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details - Faculty Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Student Details</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/faculty/dashboard">Dashboard</a>
+            <a href="/faculty/students">Students</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h2>{{student.name}}</h2>
+        <p>Email: {{student.email}}</p>
+        <p>Projects: {{student.projects}}</p>
+    </main>
+</body>
+</html>
